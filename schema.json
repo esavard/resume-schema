@@ -219,7 +219,7 @@
           "endDate": {
             "$ref": "#/definitions/iso8601"
           },
-          "gpa": {
+          "score": {
             "type": "string",
             "description": "grade point average, e.g. 3.67/4.0"
           },
@@ -257,6 +257,35 @@
           "summary": {
             "type": "string",
             "description": "e.g. Received for my work with Quantum Physics"
+          }
+        }
+      }
+    },
+    "certificates": {
+      "type": "array",
+      "description": "Specify any certificates you have received throughout your professional career",
+      "additionalItems": false,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. Certified Kubernetes Administrator"
+          },
+          "date": {
+            "type": "string",
+            "description": "e.g. 1989-06-12",
+            "format": "date"
+          },
+          "url": {
+            "type": "string",
+            "description": "e.g. http://example.com",
+            "format": "uri"
+          },
+          "issuer": {
+            "type": "string",
+            "description": "e.g. CNCF"
           }
         }
       }
